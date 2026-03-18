@@ -12,11 +12,7 @@ export default function Nav({
   className,
 }) {
   const [menuState, setMenuState] = useState(false);
-  const location = useLocation();
   const navigate = useNavigate();
-  const isHome = location.pathname === "/";
-  const isContact = location.pathname === "/contact";
-  const isMovies = location.pathname === "/movies";
   const colors = [
     "#FFFFFF",
     "#ff004f",
@@ -61,7 +57,6 @@ export default function Nav({
     }
   }
 
-  // `home__nav ${className || ""}`
   return (
     <nav className={`home__nav ${className || ""}`}>
       {
@@ -74,12 +69,6 @@ export default function Nav({
                 alt=""
               />
             </figure>
-            {/* {session?.user?.user_metadata?.first_name ? (
-              <div className="welcome_message">
-                Welcome back {session.user.user_metadata.first_name}!
-              </div>
-            ) : null} */}
-            {/* Welcome back {session?.user?.user_metadata?.first_name}! */}
             <ul className="nav__links">
               <li className="nav__link--item">
                 <Link

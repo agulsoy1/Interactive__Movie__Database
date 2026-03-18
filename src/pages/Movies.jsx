@@ -16,7 +16,6 @@ export default function Movies({ session }) {
 
   function showAlert() {
     setAlert("Too many results, please use 3 or more letters.");
-    // setTimeout(() => setAlert(""), 3000);
   }
 
   function sortByYear(MoviesArray) {
@@ -115,7 +114,6 @@ export default function Movies({ session }) {
     return decade && genre;
   });
 
-  // console.log(response.data.Search);
   async function fetchMovies(searchValue = search) {
     if (!searchValue || searchValue.trim().length < 3) {
       showAlert();
@@ -150,7 +148,6 @@ export default function Movies({ session }) {
       setMovies([]);
     }
   }
-  // console.log("Movies after sorting:", sortByYear(response.data.Search).map(m => `${m.Title} (${m.Year})`))
 
   useEffect(() => {
     const queryParams = new URLSearchParams(location.search);

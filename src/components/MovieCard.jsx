@@ -13,7 +13,6 @@ export default function MovieCard({ movie, search }) {
 
   function handleClick() {
     navigate(`/movie_details/${movie.imdbID}`, {
-      // state: { from: location.pathname + location.search},
       state: { from: `/movies?search=${search}`},
     });
   }
@@ -35,23 +34,6 @@ export default function MovieCard({ movie, search }) {
               </div>
             )}
           </div>
-          {/* {loading ? (
-            <figure className=".loading__state">
-              <FontAwesomeIcon icon={faSpinner} />
-            </figure>
-          ) : (
-            <div className="movie__container">
-              <figure className="movie_poster--wrapper">
-                <img
-                  src="/images/back_to_the_future_poster.png"
-                  alt=""
-                  className="movie__poster"
-                />
-              </figure>
-              <div className="movie__title">Back to the Future</div>
-              <div className="movie__release-date">1985</div>
-            </div>
-          )} */}
         </div>
       </div>
     </section>

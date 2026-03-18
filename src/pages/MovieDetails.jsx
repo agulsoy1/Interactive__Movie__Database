@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Nav from "../components/Nav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 export default function MovieDetails() {
-  // const location = useLocation();
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [prevID, setPrevID] = useState(null);

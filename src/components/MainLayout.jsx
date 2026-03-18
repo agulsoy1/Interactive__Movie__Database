@@ -1,7 +1,6 @@
 import { Outlet, useLocation } from "react-router-dom";
 import Footer from "./Footer";
 import Nav from "./Nav";
-import MovieSearch from "./MovieSearch";
 
 export default function MainLayout({
   session,

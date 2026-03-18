@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Nav from "../components/Nav";
+import { useState } from "react";
 import ContactForm from "../components/ContactForm";
 import emailjs from "@emailjs/browser";
 

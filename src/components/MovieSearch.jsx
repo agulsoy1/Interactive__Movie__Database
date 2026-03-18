@@ -1,6 +1,5 @@
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
 
 export default function MovieSearch({
   search,
@@ -15,7 +14,6 @@ export default function MovieSearch({
   return (
     <section id="movies__top">
       <figure className="bg__img--wrapper">
-        {/* <div className="bg__img"></div> */}
         <img src="/images/movie__bg__img.png" alt="" className="bg__img" />
         <div className="bg__img--overlay"></div>
 

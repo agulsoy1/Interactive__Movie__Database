@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 
@@ -14,7 +14,6 @@ export default function Login({setSession}) {
   console.log(formData);
 
   function handleChange(event) {
-    // event.preventDefault()
     setFormData((prevFormData) => ({
       ...prevFormData,
       [event.target.name]: event.target.value,
@@ -38,26 +37,6 @@ export default function Login({setSession}) {
     navigate('/')
   }
 
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-  // const navigate= useNavigate();
-
-  // const handleLogin = async (e) => {
-  //   e.preventDefault();
-
-  //   const {data, error} = await supabase.auth.signInWithPassword({
-  //     email: email,
-  //     password: password,
-  //   })
-
-  //   if(error){
-  //     alert(error.message)
-  //   }else{
-  //     alert("Logged in!")
-  //     navigate("/")
-  //   }
-  // }
-
   return (
     <div>
       <div className="cotainer">
@@ -66,7 +45,6 @@ export default function Login({setSession}) {
             <div className="login__container">
               <div className="login__intro">
                 <h2 className="login__title">Login</h2>
-                {/* <p className="login__para">Create an account</p> */}
               </div>
               <form className="login__form" onSubmit={handleSubmit}>
                 <ul className="login__credentials--wrapper">

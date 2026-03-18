@@ -1,8 +1,6 @@
-import Nav from "../components/Nav";
 import Header from "../components/Header";
-import axios from "axios";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Home({session, setSession}) {
   const [search, setSearch] = useState("");
@@ -20,7 +18,6 @@ export default function Home({session, setSession}) {
 
   return (
     <div>
-      {/* <Nav session={session} setSession={setSession}/> */}
       <Header
         search={search}
         setSearch={setSearch}

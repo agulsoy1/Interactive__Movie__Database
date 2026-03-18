@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 
@@ -14,7 +14,6 @@ export default function SignUp({setSession}) {
   console.log(formData);
 
   function handleChange(event) {
-    // event.preventDefault()
     setFormData((prevFormData) => ({
       ...prevFormData,
       [event.target.name]: event.target.value,

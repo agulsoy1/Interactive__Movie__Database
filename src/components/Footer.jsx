@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 export default function Footer() {
-
   return (
     <footer id="footer__movie--section">
       <div className="container">
@@ -17,17 +16,20 @@ export default function Footer() {
               </figure>
               <ul className="footer__nav--links">
                 <li className="nav__link--item">
-                <Link to = "/" className = "footer__nav--link link__hover-effect link__hover-effect--white">
-                  Home
-                </Link>
+                  <Link
+                    to="/"
+                    className="footer__nav--link link__hover-effect link__hover-effect--white"
+                  >
+                    Home
+                  </Link>
                 </li>
                 <li className="nav__link--item">
                   <Link
                     to="/movies"
                     className="
-                                    footer__nav--link 
-                                    link__hover-effect 
-                                    link__hover-effect--white"
+                      footer__nav--link 
+                      link__hover-effect 
+                      link__hover-effect--white"
                   >
                     Find your movie
                   </Link>
@@ -36,16 +38,17 @@ export default function Footer() {
                   <Link
                     to="/contact"
                     className="
-                                    footer__nav--link 
-                                    link__hover-effect 
-                                    link__hover-effect--white"
+                      footer__nav--link 
+                      link__hover-effect 
+                      link__hover-effect--white"
                   >
                     Contact
                   </Link>
                 </li>
               </ul>
               <div className="footer__copyright">
-                Copyright <i className="fa-regular fa-copyright"></i> 2026 Blinker
+                Copyright <i className="fa-regular fa-copyright"></i> 2026
+                Blinker
               </div>
             </div>
           </div>

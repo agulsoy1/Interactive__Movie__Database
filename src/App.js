@@ -4,7 +4,7 @@ import {
   Routes,
   Route,
   useLocation,
-  useNavigate,
+  Navigate,
 } from "react-router-dom";
 import Home from "./pages/Home";
 import Movies from "./pages/Movies";
@@ -26,7 +26,6 @@ function App() {
   });
 
   useEffect(() => {
-
     // async function initAuth(){
     //   // force logout first
     //   await supabase.auth.signOut();
@@ -68,8 +67,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/signup" element={<SignUp setSession={setSession} />} />
-          <Route path="/login" element={<Login setSession={setSession} />} />
+          <Route path="/signup" element={!session ? <SignUp setSession={setSession} /> : <Navigate to="/"/>} />
+          <Route path="/login" element={!session ? <Login setSession={setSession} /> : <Navigate to="/"/>} />
           <Route
             element={
               <MainLayout
@@ -82,7 +81,7 @@ function App() {
           >
             <Route
               path="/"
-              element={<Home session={session} setSession={setSession} />}
+              element={session ? <Home session={session} setSession={setSession} /> : <Navigate to="/login"/>}
             />
             <Route path="/movies" element={<Movies />} />
             <Route
@@ -105,6 +104,33 @@ function App() {
         </Routes>
       </div>
     </Router>
+    // <Router>
+    //   <div className="App">
+    //     <Routes>
+    //       <Route
+    //         element={
+    //           <MainLayout
+    //             session={session}
+    //             setSession={setSession}
+    //             profile={profile}
+    //             setProfile={setProfile}
+    //           />
+    //         }
+    //       >
+    //         <Route path="/" element={<Home session={session} />} />
+    //         <Route path="/movies" element={<Movies />} />
+    //         <Route path="/movie_details/:id" element={<MovieDetails />} />
+    //         <Route path="/contact" element={<Contact />} />
+    //         <Route path="/profile" element={<Profile session={session} />} />
+    //         <Route path="/login" element={<Login setSession={setSession} />} />
+    //         <Route
+    //           path="/signup"
+    //           element={<SignUp setSession={setSession} />}
+    //         />
+    //       </Route>
+    //     </Routes>
+    //   </div>
+    // </Router>
   );
 }
 
