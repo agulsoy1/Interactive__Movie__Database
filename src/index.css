@@ -32,8 +32,8 @@
 html {
   /* background: radial-gradient(circle, #1c0000 0%, #380000 10%, #2a0000 20%, #460000 30%, #380000 40%, #530000 50%, #460000 60%, #610000 70%, #530000 80%, #6f0000 90%, #7d0000 100%); */
   /* background: radial-gradient(circle, #1c0000 0%, #7d0000 100%); */
-  /* background: radial-gradient(circle, #0e0000 0%, #7d0000 100%); */
-  background-color: #0e0000;
+  background: radial-gradient(circle, #0e0000 0%, #460000 100%);
+  /* background-color: #0e0000; */
   /* background-color: #1c0000; */
   /* background-color: black; */
 }

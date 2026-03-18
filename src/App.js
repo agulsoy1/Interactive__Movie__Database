@@ -19,20 +19,6 @@ import Profile from "./pages/Profile";
 
 function App() {
   const [profile, setProfile] = useState(false);
-  // const location = useLocation();
-  // const navigate = useNavigate();
-
-  // function goBack() {
-  //   if (location.state?.from) {
-  //     navigate(location.state.from);
-  //   }
-  //   // if (window.history.length > 1) {
-  //   //   navigate(-1);
-  //   // }
-  //   else {
-  //     navigate("/movies");
-  //   }
-  // }
 
   const [session, setSession] = useState(() => {
     const saved = sessionStorage.getItem("session");
@@ -40,6 +26,12 @@ function App() {
   });
 
   useEffect(() => {
+
+    // async function initAuth(){
+    //   // force logout first
+    //   await supabase.auth.signOut();
+    // }
+
     // fetches the initial session
     async function fetchSession() {
       const {
@@ -47,6 +39,8 @@ function App() {
       } = await supabase.auth.getSession();
       setSession(session);
     }
+
+    // initAuth();
     fetchSession();
 
     // Listens for login/logout changes
