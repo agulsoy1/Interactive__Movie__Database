@@ -26,10 +26,6 @@ function App() {
   });
 
   useEffect(() => {
-    // async function initAuth(){
-    //   // force logout first
-    //   await supabase.auth.signOut();
-    // }
 
     // fetches the initial session
     async function fetchSession() {
@@ -48,6 +44,7 @@ function App() {
         setSession(session);
       },
     );
+
     return () => listener.subscription.unsubscribe();
   }, []);
 
