@@ -25,7 +25,7 @@ export default function Header({ search, setSearch, searchMovies, handleKeyDown 
                 placeholder="Search by Title, or Keyword"
                 className="header__search--bar"
               />
-              <button className="header__search--icon" onClick={() => searchMovies()}>
+              <button className="header__search--icon" onClick={searchMovies}>
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
               </button>
             </div>
