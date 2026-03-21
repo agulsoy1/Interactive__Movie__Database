@@ -6,6 +6,8 @@ export default function Home({session, setSession}) {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
+  
+
   function searcMovies() {
     navigate(`/movies?search=${search}`)
   }
@@ -15,6 +17,8 @@ export default function Home({session, setSession}) {
       navigate(`/movies?search=${search}`)
     }
   }
+
+  console.log("HOME PAGE LOADED")
 
   return (
     <div>

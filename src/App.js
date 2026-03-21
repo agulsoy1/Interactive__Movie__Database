@@ -78,7 +78,8 @@ function App() {
           >
             <Route
               path="/"
-              element={session ? <Home session={session} setSession={setSession} /> : <Navigate to="/login"/>}
+              // element={session ? <Home session={session} setSession={setSession} /> : <Navigate to="/login"/>}
+              element={<Home session={session} setSession={setSession} />}
             />
             <Route path="/movies" element={<Movies />} />
             <Route

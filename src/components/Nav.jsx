@@ -104,7 +104,7 @@ export default function Nav({
                     className="nav_btn profile__character"
                     style={{ backgroundColor: randomColor }}
                   >
-                    {session.user.user_metadata.first_name.charAt(0)}
+                    {session.user.user_metadata.first_name.charAt(0).toUpperCase()}
                   </button>
                   {profile ? (
                     <div className="profile">
@@ -120,7 +120,7 @@ export default function Nav({
                         <li className="profile__option">
                           <button
                             onClick={handleLogout}
-                            className="nav_btn profile_btn"
+                            className="profile_btn"
                           >
                             Logout
                           </button>
@@ -129,7 +129,12 @@ export default function Nav({
                     </div>
                   ) : null}
                 </li>
-              ) : null}
+              ) : <button
+                onClick={handleLogout}
+                className="nav__btn login__btn"
+              >
+                Login
+              </button>}
             </ul>
 
             {/* Small Screen size */}
@@ -164,11 +169,20 @@ export default function Nav({
                       Contact
                     </Link>
                   </li>
+                  {
+                    session ? 
                   <li className="menu__link">
-                    <Link className="menu__link--anchor" onClick= {() => {handleMenu(); handleLogout();}}>
+                    <Link className="menu__link--anchor" onClick={() => { handleMenu(); handleLogout(); }}>
                       Logout
                     </Link>
                   </li>
+                  :
+                    <li className="menu__link">
+                    <Link className="menu__link--anchor" onClick={() => { handleMenu(); handleLogout(); }}>
+                      Login
+                    </Link>
+                  </li>
+                  }
                 </ul>
               </div>
             ) : null}

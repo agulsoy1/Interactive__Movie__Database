@@ -126,7 +126,7 @@ LOGIN/SIGNUP
 }
 
 .login__credentials--wrapper {
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 
 .login__credentials {
@@ -167,6 +167,11 @@ LOGIN/SIGNUP
   color: black;
   background-color: #fb4b4e;
   transition: all 200ms ease-in-out;
+  margin-bottom: 12px;
+}
+
+.login__guest--button{
+  background-color: #00bfff
 }
 
 .login__submit--button:hover {
@@ -192,6 +197,10 @@ LOGIN/SIGNUP
 NAV
 
 */
+
+.login__btn{
+  margin-left: 12px;
+}
 
 .home__nav {
   position: relative;

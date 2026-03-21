@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 
-export default function Login({setSession}) {
+export default function Login({ setSession }) {
 
   const navigate = useNavigate()
 
@@ -33,7 +33,11 @@ export default function Login({setSession}) {
       return;
     }
     console.log(data)
-    setSession(data) 
+    setSession(data)
+    navigate('/')
+  }
+
+  function handleGuest() {
     navigate('/')
   }
 
@@ -77,6 +81,9 @@ export default function Login({setSession}) {
                 </ul>
                 <button className="login__submit--button" type="submit">
                   Sign in
+                </button>
+                <button className="login__submit--button login__guest--button" type="button" onClick={handleGuest}>
+                  Sign in As Guest
                 </button>
               </form>
               <div className="signup__section">
