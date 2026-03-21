@@ -8,7 +8,7 @@ export default function Home({session, setSession}) {
 
   
 
-  function searcMovies() {
+  function searchMovies() {
     navigate(`/movies?search=${search}`)
   }
 
@@ -26,7 +26,7 @@ export default function Home({session, setSession}) {
         search={search}
         setSearch={setSearch}
         handleKeyDown={handleKeyDown}
-        searchMovies={searcMovies}
+        searchMovies={searchMovies}
       />
     </div>
   );

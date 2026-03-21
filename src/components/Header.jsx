@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-export default function Header({search, setSearch, searchMovies, handleKeyDown}) {
+export default function Header({ search, setSearch, searchMovies, handleKeyDown }) {
 
   return (
     <section id="header">
@@ -25,11 +25,9 @@ export default function Header({search, setSearch, searchMovies, handleKeyDown})
                 placeholder="Search by Title, or Keyword"
                 className="header__search--bar"
               />
-              <Link to="/movies">
-                <button className="header__search--icon" onClick={() => searchMovies()}>
-                  <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
-              </Link>
+              <button className="header__search--icon" onClick={() => searchMovies()}>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </button>
             </div>
           </div>
           <figure className="header__img--wrapper">
