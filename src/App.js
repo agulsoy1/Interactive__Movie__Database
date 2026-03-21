@@ -19,7 +19,7 @@ import Profile from "./pages/Profile";
 
 function App() {
   const [profile, setProfile] = useState(false);
-
+  const [isGuest, setIsGuest] = useState(false);
   const [session, setSession] = useState(() => {
     const saved = sessionStorage.getItem("session");
     return saved ? JSON.parse(saved) : null;
@@ -64,8 +64,8 @@ function App() {
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/signup" element={!session ? <SignUp setSession={setSession} /> : <Navigate to="/"/>} />
-          <Route path="/login" element={!session ? <Login setSession={setSession} /> : <Navigate to="/"/>} />
+          <Route path="/signup" element={!session ? <SignUp setSession={setSession} /> : <Navigate to="/" />} />
+          <Route path="/login" element={!session ? <Login setSession={setSession} setIsGuest={setIsGuest} /> : <Navigate to="/" />} />
           <Route
             element={
               <MainLayout
@@ -79,7 +79,10 @@ function App() {
             <Route
               path="/"
               // element={session ? <Home session={session} setSession={setSession} /> : <Navigate to="/login"/>}
-              element={<Home session={session} setSession={setSession} />}
+              element={session || isGuest ?
+                <Home session={session} setSession={setSession} />
+                :
+                <Navigate to="/login" replace />}
             />
             <Route path="/movies" element={<Movies />} />
             <Route

@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 
-export default function Login({ setSession }) {
-
+export default function Login({ setSession, setIsGuest }) {
   const navigate = useNavigate()
 
   const [formData, setFormData] = useState({
@@ -38,6 +37,7 @@ export default function Login({ setSession }) {
   }
 
   function handleGuest() {
+    setIsGuest(true)
     navigate('/')
   }
 
