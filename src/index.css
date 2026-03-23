@@ -1082,23 +1082,23 @@ PROFILE
 */
 
 .user__profile--container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 50px;
+  margin: clamp(50px, 5vw, 250px) auto;
+  max-width: 900px;
+  padding: 0 clamp(10px, 5vw, 30px);
 }
 
 .user__profile--wrapper {
-  position: absolute;
-  top: 7.5vh;
+  position: relative;
+  margin: clamp(50px, 5vw, 100px) auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   background-color: #00171f;
-  margin: 0 auto;
-  padding-bottom: 20px;
+  padding-bottom: clamp(10px, 5vw, 20px);
   border-radius: 15px;
 }
 
@@ -1121,7 +1121,8 @@ PROFILE
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 300px;
+  padding-bottom: clamp(20px, 10vw, 400px);
+  /* flex-wrap: wrap; */
 }
 
 .user__profile--label {
