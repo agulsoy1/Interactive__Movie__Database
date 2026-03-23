@@ -52,7 +52,7 @@ button {
 }
 
 h1 {
-  font-size: 57px;
+  font-size: clamp(36px, 5vw, 57px);
   color: white;
 }
 
@@ -109,14 +109,14 @@ LOGIN/SIGNUP
 }
 
 .login__title {
-  font-size: 40px;
+  font-size: clamp(24px, 4vw, 40px);
   padding-bottom: 10px;
   color: #fb4b4e;
 }
 
 .login__para {
   padding-bottom: 30px;
-  font-size: 18px;
+  font-size: clamp(12px, 2vw, 18px);
   width: 100%;
   text-align: center;
   max-width: 250px;
@@ -135,16 +135,16 @@ LOGIN/SIGNUP
   align-items: left;
   flex-direction: column;
   padding-bottom: 30px;
-  font-size: 20px;
+  font-size: clamp(10px, 3vw, 20px);
 }
 
 .credential__label {
   padding-bottom: 15px;
-  font-size: 22px;
+  font-size: clamp(12px, 2vw, 22px);
 }
 
 .credential {
-  font-size: 18px;
+  font-size: clamp(12px, 2vw, 18px);
   width: 300px;
   height: 30px;
   border-radius: 5px;
@@ -156,13 +156,13 @@ LOGIN/SIGNUP
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 15px;
+  font-size: clamp(12px, 2vw, 15px);
 }
 
 .login__submit--button {
   width: 70%;
   padding: 10px 40px;
-  font-size: 16px;
+  font-size: clamp(12px, 2vw, 15px);
   font-weight: 800;
   color: black;
   background-color: #fb4b4e;
@@ -170,7 +170,7 @@ LOGIN/SIGNUP
   margin-bottom: 12px;
 }
 
-.login__guest--button{
+.login__guest--button {
   background-color: #00bfff
 }
 
@@ -198,7 +198,7 @@ NAV
 
 */
 
-.login__btn{
+.login__btn {
   margin-left: 12px;
 }
 
@@ -237,7 +237,8 @@ NAV
 
 .nav__link--item {
   padding: 16px;
-  font-size: 18px;
+  font-size: clamp(12px, 2vw, 18px);
+  ;
   font-weight: 600;
   margin-right: 45px;
 }
@@ -302,7 +303,7 @@ NAV
 
 .profile__character {
   padding: 10px 15px;
-  font-size: 20px;
+  font-size: clamp(12px, 2vw, 20px);
   border-radius: 50px;
   margin-left: 20px;
   border: none;
@@ -331,7 +332,7 @@ NAV
 .profile_btn {
   background-color: transparent;
   color: white;
-  font-size: 17px;
+  font-size: clamp(12px, 2vw, 17px);
   font-weight: 600;
   border: none;
   transition: all 200ms ease-in-out;
@@ -374,7 +375,7 @@ NAV
 
 .menu__link {
   margin-bottom: 80px;
-  font-size: 30px;
+  font-size: clamp(22px, 2vw, 30px);
   font-weight: 500;
 }
 
@@ -430,7 +431,7 @@ HEADER
 }
 
 .header__sub-title {
-  font-size: 30px;
+  font-size: clamp(20px, 2vw, 30px);
   margin: 0 30px 20px 20px;
   color: lightgray;
 }
@@ -449,7 +450,7 @@ HEADER
   width: 100%;
   max-width: 575px;
   padding: 20px 25px;
-  font-size: 24px;
+  font-size: clamp(14px, 2vw, 24px);
   border-radius: 20px;
   border: 1px solid black;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
@@ -459,7 +460,7 @@ HEADER
   width: 100%;
   max-width: 150px;
   margin: 0 20px;
-  font-size: 40px;
+  font-size: clamp(25px, 3vw, 40px);
   color: white;
   background-color: #6030b1;
   padding: 10px 50px;
@@ -505,7 +506,7 @@ MOVIE NAV
 .bg__img {
   position: absolute;
   width: 100%;
-  max-width: 200vh;
+  max-width: 200vw;
   min-width: 800px;
   background-size: cover;
   background-repeat: repeat;
@@ -562,7 +563,7 @@ MOVIE NAV
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 45px;
+  font-size: clamp(25px, 5vw, 45px);
   font-weight: 500;
   letter-spacing: 5px;
   color: white;
@@ -574,7 +575,8 @@ MOVIE NAV
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 600px; /* stops it from getting too wide on big screens */
+  max-width: 600px;
+  /* stops it from getting too wide on big screens */
   margin: 0 auto;
   padding: 0 12px;
 }
@@ -589,7 +591,7 @@ MOVIE NAV
   padding: 20px 16px;
   width: 100%;
   max-width: 550px;
-  font-size: 20px;
+  font-size: clamp(12px, 4vw, 20px);
   border: none;
   border-radius: 30px;
 }
@@ -600,7 +602,7 @@ MOVIE NAV
   right: 7%;
   background-color: rgba(0, 0, 0, 0);
   border: none;
-  font-size: 35px;
+  font-size: clamp(25px, 5vw, 35px);
   border-radius: 50%;
   cursor: pointer;
   transition: all 300ms ease;
@@ -617,7 +619,7 @@ Movies: Empty State
 */
 
 .empty__state--wrapper {
-  width: 35vh;
+  width: 35vw;
 }
 
 .empty__state--img {
@@ -625,7 +627,7 @@ Movies: Empty State
 }
 
 .empty__state--para {
-  font-size: 25px;
+  font-size: clamp(18px, 3vw, 25px);
   font-weight: 600;
   color: white;
   text-align: center;
@@ -660,16 +662,15 @@ Movies
 
 .middle__title {
   color: white;
-  font-size: 28px;
+  font-size: clamp(17px, 3vw, 28px);
 }
 
 .middle__para {
-  font-size: 20px;
   font-weight: 700;
   display: flex;
 }
 
-.loading__state {
+/* .loading__state {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -682,10 +683,11 @@ Movies
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
-}
+} */
 
 .movie__container {
   background-color: #fb4b4e;
@@ -693,9 +695,9 @@ Movies
   flex-direction: column;
   text-align: center;
   color: white;
-  padding: 15px 15px;
+  padding: 15px;
   width: 100%;
-  max-width: 15vh;
+  max-width: 150px;
   height: 100%;
   max-height: 400px;
   border-radius: 5px;
@@ -720,7 +722,7 @@ Movies
 }
 
 .filter__options {
-  font-size: 20px;
+  font-size: clamp(12px, 3vw, 20px);
   padding-right: 5px;
 }
 
@@ -754,14 +756,14 @@ MOVIE DETAILS
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 20vh;
+  max-width: 20vw;
 }
 
 .back__icon {
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  font-size: 40px;
+  font-size: clamp(20px, 3vw, 40px);
   margin-left: 2%;
   cursor: pointer;
   color: white;
@@ -769,10 +771,9 @@ MOVIE DETAILS
 
 .back__tag {
   display: flex;
-  text-align: center;
-  font-size: 20px;
-  margin: 20px 20px;
-  color: black;
+  align-items: center;
+  margin-left: 20px;
+  font-size: clamp(12px, 5vw, 20px);
   line-height: 25px;
   color: white;
 }
@@ -833,7 +834,7 @@ MOVIE DETAILS
   margin-bottom: 10px;
   padding-bottom: 5px;
   color: white;
-  font-size: 35px;
+  font-size: clamp(20px, 5vw, 35px);
 }
 
 .movie__card--info-wrapper {
@@ -851,6 +852,18 @@ MOVIE DETAILS
 .movie__card--info {
   padding-bottom: 10px;
   font-weight: 100;
+}
+
+.movie__card--subtitle {
+  font-size: clamp(15px, 6vw, 20px);
+}
+
+.movie__card--heading {
+  font-size: clamp(12px, 5vw, 17px);
+}
+
+.movie__card--subheading {
+  font-size: clamp(9px, 4vw, 14px);
 }
 
 /* 
@@ -909,42 +922,46 @@ CONTACT
 */
 
 .contact__section {
+  display: flex;
+  flex-wrap: wrap;
+  width: clamp(300px, 90vw, 1000px);
+  margin: 60px auto;
+  padding: clamp(5px, 5vw, 5px);
+  /* background-color: black; * /
+  /* border-radius: 5px; */
+}
+
+.contact__intro,
+.contact__form--wrapper {
   position: relative;
-  top: 5vh;
-  padding: 100px;
-  width: 100%;
-  max-width: 1000px;
-  height: 50vh;
-  margin: 0 auto;
-  margin-top: 20px;
-  background-color: black;
-  overflow: hidden;
-  border-radius: 10px;
+  width: 50%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: clamp(20px, 4vw, 60px);
 }
 
 .contact__intro {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: top;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  width: 50%;
-  height: 100%;
   background-color: #fb4b4e;
-  padding: 60px 30px;
   color: #00171f;
 }
 
 .contact__intro--title {
   padding-bottom: 20px;
-  font-size: 30px;
+  font-size: clamp(20px, 6vw, 30px);
+}
+
+.contact__form--wrapper {
+  background-color: #00171f;
 }
 
 .contact__intro--para {
-  font-size: 20px;
+  font-size: clamp(13px, 5vw, 20px);
 }
 
 .symbols__wrapper {
@@ -961,7 +978,8 @@ CONTACT
 }
 
 .symbol {
-  width: 80px;
+  width: 100%;
+  max-width: clamp(40px, 6vw, 80px);
   cursor: not-allowed;
 }
 
@@ -974,28 +992,14 @@ CONTACT
 }
 
 .symbol__name {
-  font-size: 20px;
+  font-size: clamp(15px, 4vw, 20px);
   opacity: 0;
   transition: opacity 300ms ease;
 }
 
-.contact__form--wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0 20px;
-  width: 50%;
-  height: 100%;
-  background-color: #00171f;
-}
-
 .contact__form--title {
   color: #fb4b4e;
-  font-size: 30px;
+  font-size: clamp(20px, 6vw, 30px);
   padding-bottom: 30px;
 }
 
@@ -1010,20 +1014,22 @@ CONTACT
   text-align: left;
   width: 100%;
   max-width: 400px;
+  /* padding: clamp(2px, 2vw, 4px) clamp(5px, 5vw, 25px); */
   padding-left: 10px;
   padding-bottom: 5px;
   margin-bottom: 40px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: clamp(13px, 4vw, 20px);
 }
 
 .form__submit {
-  padding: 10px 100px;
+  /* padding: 10px 100px; */
+  padding: clamp(8px, 2vw, 12px) clamp(40px, 5vw, 100px);
+  font-size: clamp(14px, 2vw, 20px);
   border-radius: 5px;
   background-color: #fb4b4e;
-  transition: all 300ms ease-in-out;
   color: white;
-  font-size: 20px;
+  transition: all 300ms ease-in-out;
   font-weight: 600;
 }
 
@@ -1049,7 +1055,7 @@ CONTACT
   max-width: 450px;
   color: white;
   font-weight: 600;
-  font-size: 30px;
+  font-size: clamp(20px, 4vw, 30px);
 }
 
 @keyframes inOut {
@@ -1057,10 +1063,12 @@ CONTACT
     opacity: 0;
     transform: translateX(-100%);
   }
+
   50% {
     opacity: 1;
     transform: translateX(0%);
   }
+
   100% {
     opacity: 0;
     transform: translateX(100%);
@@ -1078,6 +1086,7 @@ PROFILE
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 50px;
 }
 
 .user__profile--wrapper {
@@ -1097,6 +1106,7 @@ PROFILE
   text-align: center;
   padding: 30px 0;
   letter-spacing: 3px;
+  font-size: clamp(25px, 6vw, 40px);
 }
 
 .user__profile--item {
@@ -1115,11 +1125,11 @@ PROFILE
 }
 
 .user__profile--label {
-  font-size: 20px;
+  font-size: clamp(12px, 5vw, 20px);
 }
 
 .user__profile--credentials {
-  font-size: 17px;
+  font-size: clamp(9px, 4vw, 17px);
 }
 
 .profile__last-signin {
@@ -1147,54 +1157,26 @@ MEDIA QUERIES
 
   .movie__card--title {
     margin: 10px 0;
-    font-size: 27px;
+    /* font-size: 27px; */
   }
 
-  .movie__card--subtitle {
-    font-size: 20px;
-  }
-
-  .movie__card--heading {
-    font-size: 15px;
-  }
-
-  .movie__card--subheading {
-    font-size: 10px;
-  }
-
-  /* CONTACT */
-
-  .contact__section {
-    width: 100%;
-    max-width: 800px;
-  }
 }
+
 
 /* Medium devices */
 @media (max-width: 992px) {
   .movie__card--title {
-    font-size: 25px;
+    /* font-size: 25px; */
     text-align: center;
   }
-
-  .movie__card--subtitle {
-    font-size: 20px;
-  }
-
-  .movie__card--heading {
-    font-size: 15px;
-  }
-
-  .movie__card--subheading {
-    font-size: 10px;
-  }
 }
+
 
 @media (max-width: 900px) {
   /* NAV */
 
   .nav__link--item {
-    font-size: 15px;
+    /* font-size: 15px; */
     margin-right: 20px;
   }
 
@@ -1204,7 +1186,7 @@ MEDIA QUERIES
 
   .profile__character {
     padding: 10px 15px;
-    font-size: 20px;
+    /* font-size: 20px; */
     border-radius: 50px;
     margin-left: 20px;
     border: none;
@@ -1219,15 +1201,15 @@ MEDIA QUERIES
 
   /* MOVIES */
 
-  .middle__title {
+  /* .middle__title {
     font-size: 24px;
-  }
+  } */
 
   /* MOVIE DETAILS */
 
   .card__wrapper {
     position: relative;
-    top: 7vh;
+    top: 5vh;
     left: 0;
     display: flex;
     flex-direction: column;
@@ -1236,7 +1218,7 @@ MEDIA QUERIES
   }
 
   .card {
-    height: 55vh;
+    height: 60vh;
     margin: 0 auto;
     overflow: visible;
     padding: 100px 0;
@@ -1256,10 +1238,10 @@ MEDIA QUERIES
   }
 
   .movie__card--info-wrapper {
-    max-width: 40vh;
+    max-width: 70vw;
   }
 
-  .movie__card--subtitle {
+  /* .movie__card--subtitle {
     font-size: 18px;
   }
 
@@ -1269,58 +1251,10 @@ MEDIA QUERIES
 
   .movie__card--subheading {
     font-size: 10px;
-  }
+  } */
 
-  /* CONTACT */
-
-  .contact__intro--title {
-    font-size: 25px;
-  }
-
-  .contact__intro--para {
-    font-size: 15px;
-  }
-
-  .symbol__wrapper {
-    margin: 5px 15px;
-    transition: all 300ms ease;
-  }
-
-  .symbol {
-    width: 60px;
-  }
-
-  .symbol__name {
-    font-size: 15px;
-  }
-
-  .contact__form--wrapper {
-    justify-content: flex-start;
-    padding: 60px 20px;
-    width: 50%;
-    height: 100%;
-    background-color: #00171f;
-  }
-
-  .contact__form--title {
-    font-size: 25px;
-  }
-
-  .contact__section {
-    width: 100%;
-    max-width: 600px;
-  }
-
-  .contact__input {
-    width: 100%;
-    max-width: 200px;
-    font-size: 18px;
-  }
-
-  .form__submit {
-    padding: 10px 65px;
-  }
 }
+
 
 /* Wide screen desktops */
 @media (max-width: 768px) {
@@ -1336,31 +1270,31 @@ MEDIA QUERIES
 
   /* MOVIES */
 
-  .browse__title {
+  /* .browse__title {
     font-size: 35px;
-  }
+  } */
 
   .browse__search--wrapper {
-    max-width: 500px; /* stops it from getting too wide on big screens */
+    max-width: 500px;
   }
 
   .browse__searchbar {
     padding: 18px 16px;
-    font-size: 15px;
+    /* font-size: 15px; */
   }
 
   .browser__search--icon {
     top: 10%;
     right: 3%;
-    font-size: 30px;
+    /* font-size: 30px; */
   }
 
-  .middle__title {
+  /* .middle__title {
     font-size: 20px;
-  }
+  } */
 
   .filter__options {
-    font-size: 15px;
+    /* font-size: 15px; */
     padding-right: 5px;
   }
 
@@ -1380,25 +1314,23 @@ MEDIA QUERIES
   }
 
   .empty__state--wrapper {
-    width: 32vh;
+    width: 32vw;
   }
 
   .empty__state--img {
     width: 100%;
   }
 
-  .empty__state--para {
+  /* .empty__state--para {
     font-size: 24px;
-  }
+  } */
 
   .movie__container {
     font-weight: 800;
-    width: 100%;
-    max-width: 10vh;
   }
 
   .movie__title {
-    font-size: 15px;
+    /* font-size: 15px; */
     font-weight: 700;
   }
 
@@ -1409,67 +1341,42 @@ MEDIA QUERIES
     margin: 0 30px;
   }
 
-  /* CONTACT */
-
-  .contact__intro--title {
-    font-size: 20px;
+  .contact__section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
-  .contact__intro--para {
-    font-size: 15px;
+  .contact__intro,
+  .contact__form--wrapper {
+    width: 80%;
   }
 
   .symbol__wrapper {
-    margin: 5px 10px;
-    transition: all 300ms ease;
-  }
-
-  .symbol {
-    width: 60px;
-  }
-
-  .symbol__name {
-    font-size: 15px;
-  }
-
-  .contact__form--title {
-    font-size: 20px;
-  }
-
-  .contact__section {
-    width: 100%;
-    max-width: 500px;
-  }
-
-  .contact__input {
-    width: 100%;
-    max-width: 175px;
-    font-size: 15px;
-  }
-
-  .form__submit {
-    padding: 10px 50px;
+    margin: 10px 10px;
   }
 }
+
 
 /* Wide screen desktops */
 @media (max-width: 680px) {
   /* NAV */
 
-  .menu__link {
+  /* .menu__link {
     font-size: 25px;
-  }
+  } */
 
   /* HEADER */
 
   .header__title {
-    font-size: 36px;
+    /* font-size: 36px; */
     line-height: 55px;
   }
 
-  .header__sub-title {
+  /* .header__sub-title {
     font-size: 20px;
-  }
+  } */
 
   .header__search {
     max-width: 500px;
@@ -1477,12 +1384,12 @@ MEDIA QUERIES
 
   .header__search--bar {
     padding: 15px 25px;
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 
   .header__search--icon {
     padding: 8px 12px;
-    font-size: 30px;
+    /* font-size: 30px; */
     max-width: 100px;
     margin-right: 20px;
   }
@@ -1496,7 +1403,7 @@ MEDIA QUERIES
   }
 
   .filter__options {
-    font-size: 15px;
+    /* font-size: 15px; */
     padding-bottom: 5px;
   }
 
@@ -1511,12 +1418,13 @@ MEDIA QUERIES
   }
 }
 
+
 @media (max-width: 560px) {
   /* NAV */
 
-  .menu__link {
+  /* .menu__link {
     font-size: 22px;
-  }
+  } */
 
   /* HEADER */
 
@@ -1526,34 +1434,34 @@ MEDIA QUERIES
 
   /* MOVIES */
 
-  .browse__title {
+  /* .browse__title {
     font-size: 30px;
-  }
+  } */
 
   .browse__search--wrapper {
-    max-width: 450px; /* stops it from getting too wide on big screens */
+    max-width: 450px;
   }
 
   .browser__search--icon {
     top: 12%;
-    font-size: 28px;
+    /* font-size: 28px; */
   }
 
-  .middle__title {
+  /* .middle__title {
     font-size: 17px;
-  }
+  } */
 
   .empty__state--wrapper {
-    width: 28vh;
+    width: 28vw;
   }
 
   .empty__state--img {
     width: 100%;
   }
 
-  .empty__state--para {
+  /* .empty__state--para {
     font-size: 20px;
-  }
+  } */
 
   /* MOVIE DETAILS */
 
@@ -1565,47 +1473,47 @@ MEDIA QUERIES
     width: 175px;
   }
 
-  .movie__card--title {
+  /* .movie__card--title {
     font-size: 20px;
   }
 
   .movie__card--subtitle {
     font-size: 15px;
-  }
+  } */
 
   /* CONTACT */
 
-  .contact__section {
+  /* .contact__section {
     width: 100%;
     max-width: 400px;
-  }
+  } */
 
-  .contact__intro--title {
+  /* .contact__intro--title {
     font-size: 15px;
   }
 
   .contact__intro--para {
     font-size: 13px;
-  }
+  } */
 
-  .symbol__wrapper {
+  /* .symbol__wrapper {
     margin: 5px 10px;
     transition: all 300ms ease;
   }
 
   .symbol {
     width: 50px;
-  }
+  } */
 
-  .symbol__name {
+  /* .symbol__name {
     font-size: 15px;
   }
 
   .contact__form--title {
     font-size: 15px;
-  }
+  } */
 
-  .contact__input {
+  /* .contact__input {
     width: 100%;
     max-width: 145px;
     font-size: 13px;
@@ -1613,47 +1521,64 @@ MEDIA QUERIES
 
   .form__submit {
     padding: 10px 35px;
+  } */
+
+  /* PROFILE */
+
+  .user__profile--info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .user__profile--credentials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
   }
 }
 
+
 /* Large tablets */
 @media (max-width: 480px) {
-  .browse__title {
+  /* .browse__title {
     font-size: 25px;
-  }
+  } */
 
   .browse__search--wrapper {
-    max-width: 400px; /* stops it from getting too wide on big screens */
+    max-width: 400px;
   }
 
   .browse__searchbar {
     padding: 15px 16px;
-    font-size: 12px;
+    /* font-size: 12px; */
   }
 
   .browser__search--icon {
     top: 10%;
     right: 3%;
-    font-size: 25px;
+    /* font-size: 25px; */
   }
 
   .empty__state--wrapper {
-    width: 25vh;
+    width: 25vw;
   }
 
   .empty__state--img {
     width: 100%;
   }
 
-  .empty__state--para {
+  /* .empty__state--para {
     font-size: 18px;
-  }
+  } */
 
   /* MOVIE DETAILS */
 
-  .movie__card--title {
+  /* .movie__card--title {
     font-size: 16px;
-  }
+  } */
 
   .movie__card--poster-wrapper {
     margin: 0 30px;
@@ -1661,11 +1586,11 @@ MEDIA QUERIES
 
   /* FOOTER */
   .nav__link--item {
-    font-size: 13px;
+    /* font-size: 13px; */
     margin-right: 20px;
   }
 
-  .footer__copyright {
+  /* .footer__copyright {
     font-size: 12px;
-  }
+  } */
 }
